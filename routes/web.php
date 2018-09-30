@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
+    dd(request()->ip());
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
